@@ -1,0 +1,295 @@
+body{
+font-family:Arial, Helvetica, sans-serif;
+margin:0;
+}
+/* Dark mode styles */
+
+.dark-mode{
+background-color:#0f0f0f;
+color:white;
+}
+.dark-mode main{
+color: rgb(255, 250, 250);
+}
+
+.dark-mode .video-text h4{
+color: white;
+}
+
+.dark-mode .video-text p{
+color: #aaa;
+}
+.dark-mode .left div{
+color:rgb(0, 0, 0);
+}
+.dark-mode .right div{
+color:rgb(0, 0, 0);
+}
+.dark-mode .center div{
+color:rgb(0, 0, 0);
+}
+.dark-mode .categories {
+  background: #181818;
+}
+.dark-mode .categories span{
+background:#303030;
+color:white;
+}
+.dark-mode aside div{
+color:white;
+}
+.dark-mode aside div:hover{
+    background:#000000;
+};
+.dark-mode header{
+ background: #181818; /* dark header */
+  color: inherit; /* keep original text color */
+}
+.dark-mode header i,
+.dark-mode header div {
+  color: #000000; /* keep text/icon readable, do not turn white */
+}
+
+.dark-mode .video-card{
+background:#202020;
+}
+
+.dark-mode input{
+background:#121212;
+color:white;
+border:1px solid #333;
+}
+
+.dark-mode aside{
+background:#181818;
+}
+
+/* ========videostyles==================*/
+a{
+text-decoration:none;
+color:black;
+}
+.videos{
+display:grid;
+grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+gap:25px;
+}
+.thumbnail{
+width:100%;
+border-radius:10px;
+transition: transform 0.2s ease;
+}
+.thumbnail-container{
+position:relative;
+}
+
+.duration{
+position:absolute;
+bottom:8px;
+right:8px;
+background:black;
+color:white;
+font-size:12px;
+padding:3px 6px;
+border-radius:4px;
+}
+.video-card{
+cursor:pointer;
+transition: all 0.25s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+.video-card:hover .thumbnail{
+transform: scale(1.03);
+}
+.video-info{
+display:flex;
+gap:10px;
+margin-top:8px;
+}
+.channel-icon{
+width:40px;
+height:40px;
+background:#ccc;
+border-radius:50%;
+}
+.video-text h4{
+font-size:16px;
+margin:0;
+}
+
+.video-text p{
+font-size:14px;
+color:gray;
+margin-top:4px;
+}
+.video-card {
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+/*============================ video modal styles======================= */
+.video-modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:200;
+}
+
+.video-box{
+position:relative;
+}
+
+#closeVideo{
+position:absolute;
+top:-30px;
+right:0;
+font-size:30px;
+color:white;
+cursor:pointer;
+}
+
+.video-modal iframe{
+border-radius:10px;
+}
+/*============================ layout styles======================= */
+.container{
+display:flex;
+justify-content: space-evenly;
+align-items: flex-start;
+}
+aside{
+width:200px;
+padding:15px;
+}
+
+aside div{
+display:flex;
+align-items:center;
+padding:10px;
+gap: 10px;
+border-radius:10px;
+cursor:pointer;
+}
+
+aside div:hover{
+background:#f2f2f2;
+}
+main{
+flex:1;
+padding:20px;
+}
+.categories{
+ position: sticky;
+  top: 60px; /* below header */
+  background: white;
+  padding: 10px 0;
+  z-index: 50;
+}
+.categories span{
+background:#f2f2f2;
+padding:8px 15px;
+border-radius:20px;
+font-size:14px;
+cursor:pointer;
+transition:background 0.2s;
+}
+.categories span:hover{
+background:#e0e0e0;
+}
+.categories span.active {
+  background: #ff0000; /* red like YouTube */
+  color: white;
+}
+header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px 20px;
+border-bottom:1px solid #ddd;
+position:sticky;
+top:0;
+background:white;
+z-index:100;
+}
+.sidebar-hidden{
+display:none;
+}
+.left{
+display:flex;
+align-items:center;
+gap:15px;
+font-size:20px;
+cursor:pointer;
+}
+/* =========Search bar styles ===============*/
+.center{
+display:flex;
+align-items:center;
+width:40%;
+}
+
+.center input{
+flex:1;
+padding:8px;
+border:1px solid #ccc;
+border-radius:20px 0 0 20px;
+outline:none;
+}
+
+.center button{
+padding:8px 15px;
+border:1px solid #ccc;
+border-left:none;
+border-radius:0 20px 20px 0;
+cursor:pointer;
+background:#f8f8f8;
+}
+.right{
+display:flex;
+align-items:center;
+gap:20px;
+font-size:20px;
+cursor:pointer;
+}
+
+/*============================ responsive styles======================= */
+@media (max-width:1200px){
+
+.videos{
+grid-template-columns:repeat(3,1fr);
+}
+
+}
+
+@media (max-width:900px){
+
+.videos{
+grid-template-columns:repeat(2,1fr);
+}
+
+aside{
+display:none;
+}
+
+}
+
+@media (max-width:600px){
+
+.videos{
+grid-template-columns:1fr;
+}
+
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="./youtube-icon.png">
+</head>
+<body>
+    <header>
+        
+        <div class="left">
+                 <i class="fa-solid fa-bars" id="menuBtn"></i>
+                 <div><i class="fa-brands fa-youtube" style="color: #ff0606;"></i>YouTube<sup>IN</sup></div>
+        </div>
+       <div class="center">
+        <input type="text" placeholder="Search" id="searchInput">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+       </div>
+       <div class="right">
+       <button class="create-btn" style="background-color: transparent; border: 10px;border-radius: 25%; padding: 5px 10px;">
+   <i class="fa-solid fa-plus"></i> Create
+</button>
+        <i class="fa-solid fa-bell"></i>
+        <i class="fa-solid fa-user"></i>
+        <i class="fa-solid fa-moon" id="darkModeBtn"></i>
+       </div>
+    </header>
+    <div class="container">
+         <aside id="sidebar">
+                <div><i class="fa-solid fa-house"></i> Home</div>
+                <div><i class="fa-solid fa-bolt"></i> Shorts</div>
+                <div><i class="fa-solid fa-play"></i> Subscriptions</div>
+                <div><i class="fa-solid fa-user"></i> You</div>
+</aside>
+
+            <main>
+              <div class="categories">
+            <span>All</span>
+            <span>Music</span>
+            <span>Gaming</span>
+            <span>Live</span>
+            <span>AI</span>
+            <span>Web Development</span>
+        </div>
+   <div class="videos">
+    </div>
+    </main>
+   </div>
+      
+        </div>
+    <div class="video-modal" id="videoModal">
+  <div class="video-box">
+    <span id="closeVideo">&times;</span>
+    <iframe id="videoPlayer" width="800" height="450" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
