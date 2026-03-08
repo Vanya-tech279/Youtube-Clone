@@ -29,8 +29,6 @@ This project replicates the core interface and features of YouTube, with respons
 
 [View Live on Netlify](https://vanya-youtube-clone.netlify.app/)  
 
-*(Replace with your actual live YouTube clone link if deployed)*
-
 ---
 
 ## 📝 Project Objective
@@ -47,4 +45,6 @@ The goal of this project is to **practice DOM manipulation, responsive design, a
 - Improve styling and animations for a more polished look  
 
 ---
+## Author
+Vanya
 
