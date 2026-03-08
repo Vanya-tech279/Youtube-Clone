@@ -27,7 +27,7 @@ This project replicates the core interface and features of YouTube, with respons
 
 ## 📌 Live Demo
 
-[View Live on Netlify](https://cetaphil-lp.netlify.app/)  
+[View Live on Netlify](https://vanya-youtube-clone.netlify.app/)  
 
 *(Replace with your actual live YouTube clone link if deployed)*
 
